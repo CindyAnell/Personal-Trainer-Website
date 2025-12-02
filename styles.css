@@ -49,7 +49,442 @@ table {
 }
 
 /*code reset above ^^ */
+    
+/* Color Theme Swatches in Hex */
+.Woman-doing-battle-rope-workout-at-gym-1-hex { color: #8C745E; }
+.Woman-doing-battle-rope-workout-at-gym-2-hex { color: #D9C2AD; }
+.Woman-doing-battle-rope-workout-at-gym-3-hex { color: #592F25; }
+.Woman-doing-battle-rope-workout-at-gym-4-hex { color: #F2F2F2; }
+.Woman-doing-battle-rope-workout-at-gym-5-hex { color: #0D0D0D; }
+
+:root {
+    --primary-color: #8C745E;       
+    --background-light: #D9C2AD;    
+    --primary-dark: #191919;        
+    --text-light: #F2F2F2;          
+    --text-dark: #0D0D0D;           
+
+
+}
+
+
+
+
+/*lightmode / darkmode*/
+.darkmode {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+   
+}
+
+
+
+#light-mode{
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: none;
+    height:50px;
+    width:50px;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#light-mode svg{
+    fill:var(--text-color);
+    
+}
+
+#light-mode svg:last-child{
+    display:none;
+    
+}
+
+.darkmode #light-mode svg:first-child{
+    display:none;
+   
+}
+
+.darkmode #light-mode svg:last-child{
+    display:block;
+    
+}
+
+
+
+
 
 html{
-    width: 1440px;
+   
+    background-color: var(--background-light);
+    font-family: "darkmode-off", sans-serif;
+}
+
+p{
+    font-family: "articulat-cf", sans-serif;
+}
+
+.page {
+    width: 1280px;
+    margin: 0 auto; 
+}
+
+header.page {
+    align-items: center;
+}
+
+header.page img {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 8px; 
+}
+
+/*navigation/logo*/
+
+nav ul{
+    display:flex;
+    gap:30px;
+    padding: 50px;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 100;
+    font-style: normal;
+    
+    
+}
+
+header{
+    display:flex;
+    gap:30px;
+}
+
+header img {
+    padding: 20px;
+}
+
+/* cta button*/
+
+#home{
+    text-align: center;
+    
+}
+
+
+#home > a{
+    text-decoration: none;
+    color:var(--text-light);
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 5%;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    
+  
+}
+
+/*contest*/
+
+#game{
+    padding: 45px;
+    
+    
+}
+
+#game h2{
+    font-weight: 300;
+    font-style: normal;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-size: 25px;
+    
+    
+}
+
+#gameDisplay{
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+#game p{
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+
+#game form{
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+#game h3{
+    padding: 20px;
+    
+    
+}
+
+/*programs*/
+
+
+.program-section {
+    display: none;
+}
+
+
+.active-program-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 40px;      
+    align-items: center;
+}
+
+
+#program1 img, #program2 img, #program3 img, #program4 img{
+    grid-column-start: 1;
+    padding: 10px;
+}
+
+#program1 p, #program2 p, #program3 p, #program4 p{
+    grid-column: 2;
+    grid-row: 1;  
+    padding-top: 120px;        
+    align-self: start;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#program1 h2, #program2 h2, #program3 h2, #program4 h2{
+    grid-column: 2;
+    grid-row: 1;           
+    align-self: start;     
+    text-align: left;
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    
+}
+
+
+.program-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .program-tabs li {
+    margin: 0;
+    
+  }
+  
+  .program-btn {
+    width: 100%;
+    padding: 10px 45px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+
+  
+
+
+/*about*/
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;        
+    gap: 40px;                  
+    padding: 80px 100px;  
+      
+}
+
+
+#about p {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: left;           
+    max-width: 40rem;           
+    margin: 0 auto;             
+}
+
+#about img {
+    width: 75%;
+    padding: 0;                 
+    justify-self: center;       
+}
+
+
+/*reviews*/
+
+#reviews {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .reviews-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .reviews-list li {
+    flex: 0 0 calc(33.333% - 1.5rem); 
+  }
+  
+  .review img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+.review blockquote{
+    padding:20px;
+}
+
+.review .stars{
+    text-align: center;
+    padding:10px;
+}
+
+
+/*contact*/
+
+#contact h2{
+    font-size: 2rem;
+    padding:50px;
+}
+
+
+#contact {
+    width: 900px;           
+    margin: 40px auto;
+    text-align: center;
+    padding-top: 50px;
+    
+    
+  }
+  
+
+  #contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;      
+  }
+  
+
+  #contact .field {
+    margin-bottom: 1.2rem;
+  }
+  
+ 
+  #contact .field.left,
+  #contact .field.right {
+    width: calc(50% - 1rem);   
+  }
+  
+
+  #contact .field.full {
+    width: 100%;
+  }
+  
+ 
+  #contact label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+
+  #contact textarea {
+    min-height: 100px;
+  }
+  
+
+  #contact #mySubmit {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 0;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #contact #mySubmit:hover {
+    background: var(--primary-dark);
+  }
+
+  #contact textarea#message {
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    resize: none; 
+  }
+  
+
+
+/*social media*/
+
+#social{
+    text-align: center;
+    font-size: 20px;
+}
+
+#social svg{
+    stroke: var(--text-light);
+    padding: 50px;
 }
